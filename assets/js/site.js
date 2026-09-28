@@ -144,7 +144,7 @@
         <p class="line">${esc(p.line)}</p>
         <p class="desc">${esc(p.desc)}</p>
         ${installRow(p.install)}
-        <div class="tile-links"><a href="${GH}${p.repo}">source ↗</a>${p.site ? `<a href="${p.site}">${esc(p.site.replace("https://", ""))} ↗</a>` : ""}</div>
+        <div class="tile-links"><a href="${GH}${p.repo}">source ↗</a>${p.video ? `<a href="#reel" data-play="${p.video}">▶ watch the demo</a>` : ""}${p.site ? `<a href="${p.site}">${esc(p.site.replace("https://", ""))} ↗</a>` : ""}</div>
       </div>
     </article>`;
   }).join("");
@@ -199,8 +199,6 @@
       openLightbox(a.name, a.shots, +s.dataset.shot);
       return;
     }
-    const p = e.target.closest("[data-play]");
-    if (p) playVideo(p.dataset.play);
   });
 
   /* ── Themes ────────────────────────────────────────── */
@@ -246,6 +244,12 @@
       const r = t.getBoundingClientRect();
       applyTheme(t.dataset.try, { x: r.left + r.width / 2, y: r.top + r.height / 2 });
       toast(`Now wearing ${themes[themeIdx].name}. Press T to keep rotating.`);
+      return;
+    }
+    const pl = e.target.closest("[data-play]");
+    if (pl) {
+      e.preventDefault();
+      playVideo(pl.dataset.play);
       return;
     }
     const lb = e.target.closest("[data-lb]");

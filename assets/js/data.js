@@ -43,6 +43,11 @@ window.NPL = {
 
   videos: [
     {
+      id: "barkeep", title: "Barkeep", tag: "Barkeep tends your Omarchy bar.", len: "1:16",
+      src: "assets/video/barkeep-demo.mp4", poster: "assets/video/barkeep-demo-poster.webp",
+      blurb: "See the whole bar, filter it, arrange it live, and keep every plugin fresh from one overlay on Super+B.",
+    },
+    {
       id: "omaforge", title: "omaforge", tag: "WoW addons on Linux?", len: "0:30",
       src: "assets/video/omaforge-promo.mp4", poster: "assets/video/omaforge-promo-poster.webp",
       blurb: "Retail, Classic and Forever: found, installed and kept current, no Wine prefix spelunking.",
@@ -62,6 +67,7 @@ window.NPL = {
       desc: "One keyboard-driven overlay that shows every plugin the shell knows about. Arrange, pin, switch, update and remove them, and save whole bar layouts as profiles.",
       shots: ["barkeep", "barkeep-profiles", "barkeep-menu"],
       install: `omarchy plugin add ${GH}barkeep.git --enable`,
+      video: "barkeep",
     },
     {
       name: "Spotify", repo: "omarchy-spotify", cat: "media", glyph: "♫",
