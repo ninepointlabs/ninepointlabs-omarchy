@@ -200,7 +200,7 @@ window.NPL = {
     {
       name: "Omarchy-DB", repo: "omarchy-db", glyph: "▤", kicker: "Microsoft Access, without the hard parts",
       desc: "One local file. Bring spreadsheets in, work in forms or a grid, filter, save views, print to PDF — and let your agents in through MCP.",
-      shots: ["omarchy-db"],
+      shots: ["omarchy-db", "omarchy-db-view", "omarchy-db-form", "omarchy-db-report", "omarchy-db-service", "omarchy-db-light"],
     },
     {
       name: "Bahá'í Reader", repo: "bahai-reader", glyph: "✧", kicker: "A quiet place for the Writings",
