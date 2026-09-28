@@ -41,6 +41,5 @@ python3 -m http.server 8765
 ## Sources
 
 - Screenshots come from each repo's `preview*.png` / `docs/`
-- Videos were re-encoded from `~/Projects/{omaforge-promo-video,fm-cli-video,omarchy-wow-forever-video}/out/`
+- Videos were re-encoded from `~/Projects/{omaforge-promo-video,fm-cli-video}/out/`
   (`ffmpeg -c:v libx264 -crf 25 -preset slow -movflags +faststart`)
-- The WoW: Forever promo uses Blizzard artwork and is labelled as an unofficial fan piece

@@ -52,11 +52,6 @@ window.NPL = {
       src: "assets/video/fm-cli-promo.mp4", poster: "assets/video/fm-cli-promo-poster.webp",
       blurb: "Fastmail in the terminal, and unread mail from every folder live in the bar.",
     },
-    {
-      id: "wow-forever", title: "Omarchy × WoW: Forever", tag: "No need to stay on Windows or Mac.", len: "0:30",
-      src: "assets/video/wow-forever-promo.mp4", poster: "assets/video/wow-forever-promo-poster.webp",
-      blurb: "Your next adventure shouldn't need a reboot. Unofficial fan piece; artwork © Blizzard.",
-    },
   ],
 
   // cat: productivity | media | games | system | nostr

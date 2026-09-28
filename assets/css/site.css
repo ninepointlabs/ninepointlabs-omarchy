@@ -368,7 +368,7 @@ blockquote { margin: 24px 0; padding: 14px 18px; border-left: 3px solid var(--ac
   .hero { grid-template-columns: minmax(0, 1fr); padding-top: calc(var(--bar-h) + 40px); }
   .hero-desk { height: 420px; }
   .reel { grid-template-columns: minmax(0, 1fr); }
-  .reel-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .reel-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .app, .about { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .app:nth-child(even) .app-media { order: 0; }
   .about-star svg { width: 180px; }
