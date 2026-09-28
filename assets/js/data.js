@@ -55,6 +55,12 @@ window.NPL = {
       more: [["Repokase", "a-repokase"]],
     },
     {
+      id: "omarchy-db", title: "Omarchy-DB", tag: "Spreadsheet chaos?", len: "0:32",
+      src: "assets/video/omarchy-db-promo.mp4", poster: "assets/video/omarchy-db-promo-poster.webp",
+      blurb: "Bring your spreadsheets into one local database file, then browse, filter, save views, fill in forms and print reports. Agents get in through MCP.",
+      more: [["Omarchy-DB", "a-omarchy-db"]],
+    },
+    {
       id: "omaforge", title: "omaforge", tag: "WoW addons on Linux?", len: "0:30",
       src: "assets/video/omaforge-promo.mp4", poster: "assets/video/omaforge-promo-poster.webp",
       blurb: "Retail, Classic and Forever: found, installed and kept current, no Wine prefix spelunking.",
@@ -201,6 +207,7 @@ window.NPL = {
       name: "Omarchy-DB", repo: "omarchy-db", glyph: "▤", kicker: "Microsoft Access, without the hard parts",
       desc: "One local file. Bring spreadsheets in, work in forms or a grid, filter, save views, print to PDF — and let your agents in through MCP.",
       shots: ["omarchy-db", "omarchy-db-view", "omarchy-db-form", "omarchy-db-report", "omarchy-db-service", "omarchy-db-light"],
+      video: "omarchy-db",
     },
     {
       name: "Bahá'í Reader", repo: "bahai-reader", glyph: "✧", kicker: "A quiet place for the Writings",
