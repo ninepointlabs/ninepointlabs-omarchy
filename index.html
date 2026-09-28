@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nine Point Labs for Omarchy</title>
-  <meta name="description" content="Bar plugins, apps and themes for the Omarchy desktop, made by Nine Point Labs. Spotify, Fastmail, calendars, Syncthing, Zork, WoW tools and more.">
+  <meta name="description" content="Apps, bar plugins and themes for the Omarchy desktop, made by Nine Point Labs. Repokase, omaforge, fm-cli, Spotify, Fastmail, calendars, Syncthing, Zork and more.">
   <meta name="theme-color" content="#0B1419">
   <meta property="og:title" content="Nine Point Labs for Omarchy">
-  <meta property="og:description" content="Bar plugins, apps and themes for the Omarchy desktop.">
+  <meta property="og:description" content="Apps, bar plugins and themes for the Omarchy desktop.">
   <meta property="og:image" content="https://omarchy.ninepointlabs.com/assets/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/img/npl-mark.svg" type="image/svg+xml">
@@ -27,8 +27,8 @@
     <nav class="workspaces" aria-label="Sections">
       <a href="#home" data-ws="home"><b>1</b><span>home</span></a>
       <a href="#reel" data-ws="reel"><b>2</b><span>reel</span></a>
-      <a href="#plugins" data-ws="plugins"><b>3</b><span>plugins</span></a>
-      <a href="#apps" data-ws="apps"><b>4</b><span>apps</span></a>
+      <a href="#apps" data-ws="apps"><b>3</b><span>apps</span></a>
+      <a href="#plugins" data-ws="plugins"><b>4</b><span>plugins</span></a>
       <a href="#themes" data-ws="themes"><b>5</b><span>themes</span></a>
       <a href="#about" data-ws="about"><b>6</b><span>about</span></a>
     </nav>
@@ -56,12 +56,12 @@
     <p class="eyebrow"><span class="pulse"></span> Nine Point Labs × Omarchy</p>
     <h1>Small, useful things<br>for a desktop<br><span class="grad">you actually like.</span></h1>
     <p class="lede">
-      <span id="count-plugins">15</span> bar plugins, <span id="count-apps">4</span> apps and
+      <span id="count-apps">5</span> apps, <span id="count-plugins">15</span> bar plugins and
       <span id="count-themes">5</span> themes for <a href="https://omarchy.org">Omarchy</a>.
       Mail, music, calendars, cameras, sync, Nostr, and yes, Zork. Every one of them follows your theme.
     </p>
     <div class="cta">
-      <a class="btn primary" href="#plugins">Browse the plugins <span aria-hidden="true">↓</span></a>
+      <a class="btn primary" href="#apps">Browse the projects <span aria-hidden="true">↓</span></a>
       <a class="btn" href="#reel">▶ Watch the reel</a>
     </div>
     <p class="hint">Try it: press <kbd>T</kbd> to rotate the theme, <kbd>/</kbd> to search, <kbd>1</kbd>–<kbd>6</kbd> to switch workspace.</p>
@@ -96,10 +96,20 @@
   </div>
 </section>
 
-<!-- 3 · PLUGINS -->
+<!-- 3 · APPS -->
+<section id="apps" class="ws wrap">
+  <header class="sec-head">
+    <p class="eyebrow">workspace 3 · apps</p>
+    <h2>When a bar chip isn't enough.</h2>
+    <p class="sub">Full windows and terminal tools, built for Omarchy first.</p>
+  </header>
+  <div id="app-list" class="apps"></div>
+</section>
+
+<!-- 4 · PLUGINS -->
 <section id="plugins" class="ws wrap">
   <header class="sec-head">
-    <p class="eyebrow">workspace 3 · bar plugins</p>
+    <p class="eyebrow">workspace 4 · bar plugins</p>
     <h2>Everything lives in the bar.</h2>
     <p class="sub">Native Quickshell widgets for Omarchy. Most install with one line, and all of them pick up whatever theme you're running.</p>
   </header>
@@ -112,16 +122,6 @@
     <button data-cat="nostr">nostr</button>
   </div>
   <div class="tiles" id="plugin-grid"></div>
-</section>
-
-<!-- 4 · APPS -->
-<section id="apps" class="ws wrap">
-  <header class="sec-head">
-    <p class="eyebrow">workspace 4 · apps</p>
-    <h2>When a bar chip isn't enough.</h2>
-    <p class="sub">Full windows and terminal tools, built for Omarchy first.</p>
-  </header>
-  <div id="app-list" class="apps"></div>
 </section>
 
 <!-- 5 · THEMES -->
@@ -163,7 +163,7 @@
 <!-- Walker-style launcher -->
 <div class="overlay" id="launcher" hidden>
   <div class="launcher win" role="dialog" aria-modal="true" aria-label="Search">
-    <input id="launcher-input" type="text" placeholder="Search plugins, apps, themes…" autocomplete="off" spellcheck="false">
+    <input id="launcher-input" type="text" placeholder="Search apps, plugins, themes…" autocomplete="off" spellcheck="false">
     <ul id="launcher-results" role="listbox"></ul>
   </div>
 </div>

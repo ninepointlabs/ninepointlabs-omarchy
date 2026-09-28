@@ -41,6 +41,6 @@ python3 -m http.server 8765
 ## Sources
 
 - Screenshots come from each repo's `preview*.png` / `docs/`
-- Videos were re-encoded from `~/Projects/{omaforge-promo-video,fm-cli-video}/out/`
+- Videos were re-encoded from `~/Projects/{repokase-promo-video,omaforge-promo-video,fm-cli-video}/out/`
   and `~/media/marketing/barkeep-demo.mp4`
   (`ffmpeg -c:v libx264 -crf 25 -preset slow -movflags +faststart`)

@@ -99,7 +99,7 @@
   $("#count-plugins").textContent = plugins.length;
   $("#count-apps").textContent = apps.length;
   $("#count-themes").textContent = themeRepos.length;
-  const names = [...plugins.map((p) => p.name), ...apps.map((a) => a.name), ...themeRepos.map((t) => `${t.name} theme`)];
+  const names = [...apps.map((a) => a.name), ...plugins.map((p) => p.name), ...themeRepos.map((t) => `${t.name} theme`)];
   const marq = names.map((n) => `<span>${esc(n)}<b>✦</b></span>`).join("");
   $("#marquee").innerHTML = marq + marq;
 
@@ -111,7 +111,8 @@
     video.src = v.src;
     $("#reel-title").textContent = `mpv — ${v.title}`;
     $("#reel-len").textContent = v.len;
-    $("#reel-blurb").innerHTML = `<strong style="color:var(--fg)">${esc(v.tag)}</strong> ${esc(v.blurb)}`;
+    const more = (v.more || []).map(([label, id]) => `<a href="#${id}" data-goto="${id}">more about ${esc(label)} →</a>`).join("");
+    $("#reel-blurb").innerHTML = `<strong style="color:var(--fg)">${esc(v.tag)}</strong> ${esc(v.blurb)}${more ? `<span class="reel-more">${more}</span>` : ""}`;
     $$(".reel-item").forEach((b) => b.classList.toggle("active", b.dataset.video === v.id));
     if (play) video.play().catch(() => {});
   }
@@ -246,6 +247,12 @@
       toast(`Now wearing ${themes[themeIdx].name}. Press T to keep rotating.`);
       return;
     }
+    const go = e.target.closest("[data-goto]");
+    if (go) {
+      e.preventDefault();
+      goTo(go.dataset.goto);
+      return;
+    }
     const pl = e.target.closest("[data-play]");
     if (pl) {
       e.preventDefault();
@@ -280,10 +287,10 @@
 
   /* ── Launcher ──────────────────────────────────────── */
   const entries = [
-    ...[["home", "Home", "1"], ["reel", "The reel · promo videos", "2"], ["plugins", "Bar plugins", "3"], ["apps", "Apps", "4"], ["themes", "Themes", "5"], ["about", "About Nine Point Labs", "6"]]
+    ...[["home", "Home", "1"], ["reel", "The reel · promo videos", "2"], ["apps", "Apps", "3"], ["plugins", "Bar plugins", "4"], ["themes", "Themes", "5"], ["about", "About Nine Point Labs", "6"]]
       .map(([id, name, k]) => ({ kind: "workspace", glyph: k, name, sub: `jump to workspace ${k}`, go: () => location.assign(`#${id}`) })),
-    ...plugins.map((p) => ({ kind: "plugin", glyph: p.glyph, name: p.name, sub: p.line, go: () => { resetFilter(); $(`#p-${p.repo}`).scrollIntoView({ behavior: "smooth", block: "center" }); flash(`#p-${p.repo}`); } })),
-    ...apps.map((a) => ({ kind: "app", glyph: a.glyph, name: a.name, sub: a.kicker, go: () => $(`#a-${a.repo}`).scrollIntoView({ behavior: "smooth", block: "center" }) })),
+    ...apps.map((a) => ({ kind: "app", glyph: a.glyph, name: a.name, sub: a.kicker, go: () => goTo(`a-${a.repo}`) })),
+    ...plugins.map((p) => ({ kind: "plugin", glyph: p.glyph, name: p.name, sub: p.line, go: () => goTo(`p-${p.repo}`) })),
     ...themes.map((t) => ({ kind: "theme", glyph: "◐", name: `${t.name}`, sub: `apply to this page · ${t.note}`, go: () => { applyTheme(t.id); toast(`theme → ${t.name}`); } })),
     ...videos.map((v) => ({ kind: "video", glyph: "▶", name: v.title, sub: v.tag, go: () => playVideo(v.id) })),
   ];
@@ -293,8 +300,18 @@
   let matches = [], sel = 0;
 
   function resetFilter() { $('#filters [data-cat="all"]').click(); }
+  // Scroll a plugin tile or app into view and highlight it, un-hiding it if a filter is on.
+  function goTo(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.classList.contains("hide")) resetFilter();
+    el.classList.add("in");
+    el.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
+    flash(`#${id}`);
+  }
   function flash(sel) {
-    const el = $(sel);
+    // Apps aren't windows themselves; light up their screenshot window instead.
+    const el = $(sel).classList.contains("win") ? $(sel) : $(".win", $(sel));
     el.classList.add("active");
     setTimeout(() => el.classList.remove("active"), 1600);
   }
@@ -347,7 +364,7 @@
   $("#theme-btn").addEventListener("click", (e) => rotateTheme({ x: e.clientX, y: e.clientY }));
 
   /* ── Keyboard ──────────────────────────────────────── */
-  const wsIds = ["home", "reel", "plugins", "apps", "themes", "about"];
+  const wsIds = ["home", "reel", "apps", "plugins", "themes", "about"];
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") { closeLauncher(); closeLightbox(); return; }
     if (lbState && (e.key === "ArrowRight" || e.key === "ArrowLeft")) {

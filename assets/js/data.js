@@ -46,16 +46,25 @@ window.NPL = {
       id: "barkeep", title: "Barkeep", tag: "Barkeep tends your Omarchy bar.", len: "1:16",
       src: "assets/video/barkeep-demo.mp4", poster: "assets/video/barkeep-demo-poster.webp",
       blurb: "See the whole bar, filter it, arrange it live, and keep every plugin fresh from one overlay on Super+B.",
+      more: [["Barkeep", "p-barkeep"]],
+    },
+    {
+      id: "repokase", title: "Repokase", tag: "Too many repos?", len: "0:32",
+      src: "assets/video/repokase-promo.mp4", poster: "assets/video/repokase-promo-poster.webp",
+      blurb: "Every GitHub repo you own, with CI, health and traffic, in one keyboard-driven window that wears your theme.",
+      more: [["Repokase", "a-repokase"]],
     },
     {
       id: "omaforge", title: "omaforge", tag: "WoW addons on Linux?", len: "0:30",
       src: "assets/video/omaforge-promo.mp4", poster: "assets/video/omaforge-promo-poster.webp",
       blurb: "Retail, Classic and Forever: found, installed and kept current, no Wine prefix spelunking.",
+      more: [["omaforge", "a-omaforge"]],
     },
     {
       id: "fm-cli", title: "fm-cli + omarchy-fastmail", tag: "Still checking email in a browser tab?", len: "0:36",
       src: "assets/video/fm-cli-promo.mp4", poster: "assets/video/fm-cli-promo-poster.webp",
       blurb: "Fastmail in the terminal, and unread mail from every folder live in the bar.",
+      more: [["fm-cli", "a-fm-cli"], ["Fastmail plugin", "p-omarchy-fastmail"]],
     },
   ],
 
@@ -177,6 +186,14 @@ window.NPL = {
       install: "sudo pacman -U omaforge-*-any.pkg.tar.zst",
       installNote: `from the <a href="${GH}omaforge/releases/latest">latest release</a>`,
       video: "omaforge",
+    },
+    {
+      name: "Repokase", repo: "repokase", glyph: "▣", kicker: "Your repos, chef's choice",
+      desc: "Every GitHub repository you own, collaborate on or see through an org, in one native window. Stats, CI runs, health badges, traffic history past GitHub's 14 days, bulk archive, and workflow_dispatch with inputs. Fully keyboard-driven, and it repaints the moment you run omarchy theme set.",
+      shots: ["repokase-hero", "repokase-details-traffic", "repokase-run-workflow", "repokase-theme-latte"],
+      install: "sudo pacman -U https://github.com/ninepointlabs/repokase/releases/download/v0.1.0/repokase-0.1.0-2-any.pkg.tar.zst",
+      installNote: `v0.1.0 · see <a href="${GH}repokase/releases/latest">the latest release</a> for newer builds`,
+      video: "repokase",
     },
     {
       name: "fm-cli", repo: "fm-cli", glyph: "✉\uFE0E", kicker: "Fastmail from the terminal",
