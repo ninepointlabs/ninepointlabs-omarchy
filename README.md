@@ -3,7 +3,7 @@
 Landing page for every Nine Point Labs project built for [Omarchy](https://omarchy.org):
 bar plugins, apps, themes, and the promo videos.
 
-Plain HTML, CSS and JS with no build step, so it's ready for GitHub Pages as-is.
+Plain HTML, CSS and JS with no build step. Live at https://ninepointlabs.github.io/ninepointlabs-omarchy/ (GitHub Pages, deploys from `main`).
 
 The page behaves like an Omarchy desktop:
 
