@@ -175,10 +175,9 @@
         <p class="kicker">${esc(a.kicker)}</p>
         <h3><span class="g">${esc(a.glyph)}</span>${esc(a.name)}</h3>
         <p class="desc">${esc(a.desc)}</p>
-        ${installRow(a.install)}
-        <p class="note">${a.installNote || "&nbsp;"}</p>
         <div class="app-actions">
-          <a class="btn primary" href="${GH}${a.repo}">View on GitHub ↗</a>
+          <a class="btn primary" href="${GH}${a.repo}/releases/latest">Download the latest release ↗</a>
+          <a class="btn" href="${GH}${a.repo}">View on GitHub ↗</a>
           ${a.video ? `<button class="btn" data-play="${a.video}">▶ Watch the promo</button>` : ""}
         </div>
       </div>
