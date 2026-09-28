@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nine Point Labs for Omarchy</title>
+  <meta name="description" content="Bar plugins, apps and themes for the Omarchy desktop, made by Nine Point Labs. Spotify, Fastmail, calendars, Syncthing, Zork, WoW tools and more.">
+  <meta name="theme-color" content="#0B1419">
+  <meta property="og:title" content="Nine Point Labs for Omarchy">
+  <meta property="og:description" content="Bar plugins, apps and themes for the Omarchy desktop.">
+  <meta property="og:image" content="assets/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/npl-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<!-- Waybar-style top bar -->
+<header class="bar" id="bar">
+  <div class="bar-left">
+    <a href="#home" class="bar-logo" aria-label="Nine Point Labs, back to top">
+      <svg viewBox="0 0 300 300" aria-hidden="true"><use href="#star"/></svg>
+    </a>
+    <nav class="workspaces" aria-label="Sections">
+      <a href="#home" data-ws="home"><b>1</b><span>home</span></a>
+      <a href="#reel" data-ws="reel"><b>2</b><span>reel</span></a>
+      <a href="#plugins" data-ws="plugins"><b>3</b><span>plugins</span></a>
+      <a href="#apps" data-ws="apps"><b>4</b><span>apps</span></a>
+      <a href="#themes" data-ws="themes"><b>5</b><span>themes</span></a>
+      <a href="#about" data-ws="about"><b>6</b><span>about</span></a>
+    </nav>
+  </div>
+  <div class="bar-center" id="clock" aria-hidden="true"></div>
+  <div class="bar-right">
+    <button class="chip" id="launcher-btn" title="Search everything (/)"><span class="k">/</span><span class="chip-label">search</span></button>
+    <button class="chip" id="theme-btn" title="Rotate theme (T)"><span class="dot"></span><span class="chip-label" id="theme-name">Nine Point</span></button>
+    <a class="chip icon" href="https://github.com/ninepointlabs" title="GitHub" aria-label="Nine Point Labs on GitHub">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    </a>
+  </div>
+</header>
+
+<main>
+
+<!-- 1 · HOME -->
+<section id="home" class="hero ws">
+  <div class="hero-bg" aria-hidden="true">
+    <svg class="hero-star" viewBox="0 0 300 300"><use href="#star"/></svg>
+    <div class="hero-grid"></div>
+  </div>
+
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="pulse"></span> Nine Point Labs × Omarchy</p>
+    <h1>Small, useful things<br>for a desktop<br><span class="grad">you actually like.</span></h1>
+    <p class="lede">
+      <span id="count-plugins">15</span> bar plugins, <span id="count-apps">4</span> apps and
+      <span id="count-themes">5</span> themes for <a href="https://omarchy.org">Omarchy</a>.
+      Mail, music, calendars, cameras, sync, Nostr, and yes, Zork. Every one of them follows your theme.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#plugins">Browse the plugins <span aria-hidden="true">↓</span></a>
+      <a class="btn" href="#reel">▶ Watch the reel</a>
+    </div>
+    <p class="hint">Try it: press <kbd>T</kbd> to rotate the theme, <kbd>/</kbd> to search, <kbd>1</kbd>–<kbd>6</kbd> to switch workspace.</p>
+  </div>
+
+  <div class="hero-desk" aria-hidden="true">
+    <div class="win term">
+      <div class="win-title"><span>alacritty</span><span class="wt-dim">~</span></div>
+      <pre class="term-body" id="term"></pre>
+    </div>
+    <div class="win shot s1"><img src="assets/img/spotify.webp" alt="" loading="eager"></div>
+    <div class="win shot s2"><img src="assets/img/theme-rotate.webp" alt=""></div>
+    <div class="win shot s3"><img src="assets/img/zork.webp" alt=""></div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+<!-- 2 · REEL -->
+<section id="reel" class="ws wrap">
+  <header class="sec-head">
+    <p class="eyebrow">workspace 2 · the reel</p>
+    <h2>Thirty seconds each.<br>No reboot required.</h2>
+  </header>
+  <div class="reel">
+    <div class="win reel-main">
+      <div class="win-title"><span id="reel-title">mpv</span><span class="wt-dim" id="reel-len"></span></div>
+      <video id="reel-video" controls playsinline preload="metadata"></video>
+      <p class="reel-blurb" id="reel-blurb"></p>
+    </div>
+    <div class="reel-list" id="reel-list" role="list"></div>
+  </div>
+</section>
+
+<!-- 3 · PLUGINS -->
+<section id="plugins" class="ws wrap">
+  <header class="sec-head">
+    <p class="eyebrow">workspace 3 · bar plugins</p>
+    <h2>Everything lives in the bar.</h2>
+    <p class="sub">Native Quickshell widgets for Omarchy. Most install with one line, and all of them pick up whatever theme you're running.</p>
+  </header>
+  <div class="filters" id="filters" role="tablist">
+    <button class="on" data-cat="all">all</button>
+    <button data-cat="productivity">productivity</button>
+    <button data-cat="media">media</button>
+    <button data-cat="system">system</button>
+    <button data-cat="games">games</button>
+    <button data-cat="nostr">nostr</button>
+  </div>
+  <div class="tiles" id="plugin-grid"></div>
+</section>
+
+<!-- 4 · APPS -->
+<section id="apps" class="ws wrap">
+  <header class="sec-head">
+    <p class="eyebrow">workspace 4 · apps</p>
+    <h2>When a bar chip isn't enough.</h2>
+    <p class="sub">Full windows and terminal tools, built for Omarchy first.</p>
+  </header>
+  <div id="app-list" class="apps"></div>
+</section>
+
+<!-- 5 · THEMES -->
+<section id="themes" class="ws wrap">
+  <header class="sec-head">
+    <p class="eyebrow">workspace 5 · themes</p>
+    <h2>Change the whole desk,<br>not just the wallpaper.</h2>
+    <p class="sub">Each theme ships its own palette, so borders, bar, terminal and every plugin above change with it. Hit <em>try it here</em> to repaint this page with the real colours.</p>
+  </header>
+  <div class="themes" id="theme-grid"></div>
+</section>
+
+<!-- 6 · ABOUT -->
+<section id="about" class="ws wrap about">
+  <div class="about-star" aria-hidden="true"><svg viewBox="0 0 300 300"><use href="#star"/></svg></div>
+  <div class="about-copy">
+    <p class="eyebrow">workspace 6 · who's building this</p>
+    <h2>Nine Point Labs</h2>
+    <p>I'm Tim: combat veteran, semi-retired technologist, full-time dad in Whitehouse, Texas. Omarchy runs on every machine I sit down at, and these projects are my way of giving something back to it.</p>
+    <p>I write some of the code and direct a small team of AI agents for the rest. My one real skill is seeing clearly what a tool should <em>feel</em> like, and being stubborn until it does.</p>
+    <blockquote><strong>Why nine?</strong> In the Bahá'í Faith, nine is the number of completeness and of unity, especially the unity of humanity. Hence the star, and hence the name.</blockquote>
+    <div class="links">
+      <a class="btn primary" href="https://github.com/ninepointlabs">GitHub</a>
+      <a class="btn" href="https://ninepointlabs.com">ninepointlabs.com</a>
+      <a class="btn" href="https://x.com/ninepointlabs">X</a>
+      <a class="btn" href="https://njump.me/npub13hyx3qsqk3r7ctjqrr49uskut4yqjsxt8uvu4rekr55p08wyhf0qq90nt7">Nostr</a>
+      <a class="btn" href="mailto:hello@ninepointlabs.com">hello@ninepointlabs.com</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot wrap">
+  <span>© <span id="year">2026</span> Nine Point Labs. Not affiliated with Omarchy or the Omacom Foundation. Just a big fan.</span>
+  <span class="keys"><kbd>1</kbd>–<kbd>6</kbd> workspaces · <kbd>T</kbd> theme · <kbd>/</kbd> search · <kbd>Esc</kbd> close</span>
+</footer>
+
+<!-- Walker-style launcher -->
+<div class="overlay" id="launcher" hidden>
+  <div class="launcher win" role="dialog" aria-modal="true" aria-label="Search">
+    <input id="launcher-input" type="text" placeholder="Search plugins, apps, themes…" autocomplete="off" spellcheck="false">
+    <ul id="launcher-results" role="listbox"></ul>
+  </div>
+</div>
+
+<!-- Screenshot lightbox -->
+<div class="overlay" id="lightbox" hidden>
+  <figure class="lb win">
+    <div class="win-title"><span id="lb-title"></span><button class="lb-x" id="lb-close" aria-label="Close">×</button></div>
+    <img id="lb-img" alt="">
+  </figure>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="star" viewBox="0 0 300 300">
+      <polygon points="150,32 167.79,101.14 225.85,59.61 195.03,124 266.21,129.51 201.21,159.03 252.19,209 183.42,189.83 190.36,260.88 150,202 109.64,260.88 116.58,189.83 47.81,209 98.79,159.03 33.79,129.51 104.97,124 74.15,59.61 132.21,101.14" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
+      <polygon points="150,108 156.16,133.09 177,117.83 165.59,141 191.36,142.71 167.73,153.13 186.37,171 161.57,163.79 164.36,189.47 150,168 135.64,189.47 138.43,163.79 113.63,171 132.27,153.13 108.64,142.71 134.41,141 123,117.83 143.84,133.09" fill="currentColor" opacity=".9"/>
+    </symbol>
+  </defs>
+</svg>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
