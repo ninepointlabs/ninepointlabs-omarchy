@@ -49,6 +49,12 @@ window.NPL = {
       more: [["Barkeep", "p-barkeep"]],
     },
     {
+      id: "speakeasy", title: "Speakeasy", tag: "Four agents, nine terminals?", len: "1:29",
+      src: "assets/video/speakeasy-promo.mp4", poster: "assets/video/speakeasy-promo-poster.webp",
+      blurb: "Hand Claude Code, Codex or Gemini a named task and it works in a hidden terminal. The bar shows which need you, and a notification opens the right one.",
+      more: [["Speakeasy", "p-speakeasy"]],
+    },
+    {
       id: "repokase", title: "Repokase", tag: "Too many repos?", len: "0:32",
       src: "assets/video/repokase-promo.mp4", poster: "assets/video/repokase-promo-poster.webp",
       blurb: "Every GitHub repo you own, with CI, health and traffic, in one keyboard-driven window that wears your theme.",
@@ -83,6 +89,14 @@ window.NPL = {
       shots: ["barkeep", "barkeep-profiles", "barkeep-menu"],
       install: `omarchy plugin add ${GH}barkeep.git --enable`,
       video: "barkeep",
+    },
+    {
+      name: "Speakeasy", repo: "speakeasy", cat: "productivity", glyph: "▽",
+      line: "The back room for your AI agents.",
+      desc: "Give Claude Code, Codex, Gemini or another agent a named task and it runs in a hidden terminal. The bar shows what's working, what's done and what needs you; a notification opens that task's terminal.",
+      shots: ["speakeasy", "speakeasy-new-task", "speakeasy-models", "speakeasy-peek"],
+      install: `omarchy plugin add ${GH}speakeasy.git --enable`,
+      video: "speakeasy",
     },
     {
       name: "Spotify", repo: "omarchy-spotify", cat: "media", glyph: "♫",
