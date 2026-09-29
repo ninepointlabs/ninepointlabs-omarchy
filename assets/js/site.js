@@ -123,7 +123,12 @@
     </button>`).join("");
   $("#reel-list").addEventListener("click", (e) => {
     const b = e.target.closest(".reel-item");
-    if (b) loadVideo(b.dataset.video, true);
+    if (!b) return;
+    loadVideo(b.dataset.video, true);
+    // The list sits below the player, so bring the player back into view if any of it is hidden.
+    const main = $(".reel-main"), r = main.getBoundingClientRect();
+    const barH = $(".bar")?.offsetHeight || 0;
+    if (r.top < barH || r.bottom > innerHeight) main.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
   });
   loadVideo(videos[0].id, false);
   function playVideo(id) {
