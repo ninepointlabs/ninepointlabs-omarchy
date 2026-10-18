@@ -59,7 +59,8 @@ kbd {
 .bar-logo:hover svg { transform: rotate(40deg); }
 .workspaces { display: flex; gap: 2px; }
 .workspaces a {
-  display: flex; align-items: center; gap: 6px; padding: 3px 8px;
+  display: flex; align-items: center; justify-content: center; gap: 6px; padding: 3px 8px;
+  min-width: 24px; /* WCAG target size */
   color: var(--fg-dim); text-decoration: none; position: relative;
 }
 .workspaces a b { font-weight: 700; }

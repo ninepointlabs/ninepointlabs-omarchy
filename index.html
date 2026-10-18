@@ -95,7 +95,7 @@
       <video id="reel-video" controls playsinline preload="metadata"></video>
       <p class="reel-blurb" id="reel-blurb"></p>
     </div>
-    <div class="reel-list" id="reel-list" role="list"></div>
+    <div class="reel-list" id="reel-list" role="group" aria-label="Videos"></div>
   </div>
 </section>
 
@@ -116,13 +116,13 @@
     <h2>Everything lives in the bar.</h2>
     <p class="sub">Native Quickshell widgets for Omarchy. Most install with one line, and all of them pick up whatever theme you're running.</p>
   </header>
-  <div class="filters" id="filters" role="tablist">
-    <button class="on" data-cat="all">all</button>
-    <button data-cat="productivity">productivity</button>
-    <button data-cat="media">media</button>
-    <button data-cat="system">system</button>
-    <button data-cat="games">games</button>
-    <button data-cat="nostr">nostr</button>
+  <div class="filters" id="filters" role="group" aria-label="Filter plugins by category">
+    <button class="on" data-cat="all" aria-pressed="true">all</button>
+    <button data-cat="productivity" aria-pressed="false">productivity</button>
+    <button data-cat="media" aria-pressed="false">media</button>
+    <button data-cat="system" aria-pressed="false">system</button>
+    <button data-cat="games" aria-pressed="false">games</button>
+    <button data-cat="nostr" aria-pressed="false">nostr</button>
   </div>
   <div class="tiles" id="plugin-grid"></div>
 </section>
