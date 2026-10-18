@@ -117,7 +117,7 @@
     if (play) video.play().catch(() => {});
   }
   $("#reel-list").innerHTML = videos.map((v) => `
-    <button class="reel-item win" data-video="${v.id}" role="listitem">
+    <button class="reel-item win" data-video="${v.id}">
       <div class="thumb"><img src="${v.poster}" alt="" loading="lazy"><div class="play"><i>▶</i></div></div>
       <div class="meta"><strong>${esc(v.title)}</strong><span>${esc(v.tag)} · ${v.len}</span></div>
     </button>`).join("");
@@ -164,7 +164,7 @@
   filters.addEventListener("click", (e) => {
     const b = e.target.closest("button");
     if (!b) return;
-    $$("button", filters).forEach((x) => x.classList.toggle("on", x === b));
+    $$("button", filters).forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
     $$(".tile").forEach((t) => t.classList.toggle("hide", b.dataset.cat !== "all" && t.dataset.cat !== b.dataset.cat));
   });
 
