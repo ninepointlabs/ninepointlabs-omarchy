@@ -31,6 +31,11 @@ window.NPL = {
       c: { bg: "#1E2419", bgDark: "#161B12", bgLight: "#2A3323", fg: "#EAE4D3", fgDim: "#8F9A80", accent: "#C9A227", selection: "#3D4A32", muted: "#6F7A62", red: "#C8312F", yellow: "#D9B33A", green: "#6E9E4F", magenta: "#8B5CC8", cyan: "#5FA8A0" },
     },
     {
+      id: "campfire", name: "WoW Forever: Campfire", repo: "omarchy-wow-forever-campfire-theme", slug: "wow-forever-campfire", img: "theme-campfire",
+      note: "A night camp in the pines. Campfire amber on forest canopy blue-black.",
+      c: { bg: "#121A21", bgDark: "#0D1318", bgLight: "#1B2731", fg: "#E4D8C0", fgDim: "#7D8890", accent: "#E3A04F", selection: "#2E3A44", muted: "#6B7A85", red: "#C9583A", yellow: "#E3A04F", green: "#8FA86A", magenta: "#9A88C6", cyan: "#6FA3A8" },
+    },
+    {
       id: "ted-lasso", name: "Ted Lasso", repo: "omarchy-ted-lasso-theme", slug: "\"Ted Lasso\"", img: "theme-ted-lasso",
       note: "Richmond navy, biscuit cream and a yellow sign that says BELIEVE.",
       c: { bg: "#16283D", bgDark: "#101D2C", bgLight: "#22374D", fg: "#F5ECD9", fgDim: "#8A9BAE", accent: "#F2C230", selection: "#3A5068", muted: "#5C7086", red: "#D64545", yellow: "#F2C230", green: "#5FA85D", magenta: "#D98FC0", cyan: "#5FB6B0" },
@@ -61,10 +66,10 @@ window.NPL = {
       more: [["Repokase", "a-repokase"]],
     },
     {
-      id: "omarchy-db", title: "Omarchy-DB", tag: "Spreadsheet chaos?", len: "0:32",
+      id: "omarchy-db", title: "Jubako", tag: "Spreadsheet chaos?", len: "0:32",
       src: "assets/video/omarchy-db-promo.mp4", poster: "assets/video/omarchy-db-promo-poster.webp",
-      blurb: "Bring your spreadsheets into one local database file, then browse, filter, save views, fill in forms and print reports. Agents get in through MCP.",
-      more: [["Omarchy-DB", "a-omarchy-db"]],
+      blurb: "Jubako brings your spreadsheets into one local database file, then lets you browse, filter, save views, fill in forms and print reports. Agents get in through MCP.",
+      more: [["Jubako", "a-jubako"]],
     },
     {
       id: "omaforge", title: "omaforge", tag: "WoW addons on Linux?", len: "0:30",
@@ -91,12 +96,26 @@ window.NPL = {
       video: "barkeep",
     },
     {
+      name: "Barback", repo: "barback", cat: "system", glyph: "▧",
+      line: "A drawer for the Omarchy bar.",
+      desc: "One chip holds several third-party bar widgets, so plugins you are trialling take a single slot instead of one each. Hover to expand, click to pin open. Sibling to Barkeep: Barkeep tends, Barback shelves.",
+      shots: [],
+      install: `git clone ${GH}barback && cd barback && ./install.sh && omarchy bar put ninepointlabs.barback --section right`,
+    },
+    {
       name: "Speakeasy", repo: "speakeasy", cat: "productivity", glyph: "▽",
       line: "The back room for your AI agents.",
       desc: "Give Claude Code, Codex, Gemini or another agent a named task and it runs in a hidden terminal. The bar shows what's working, what's done and what needs you; a notification opens that task's terminal.",
       shots: ["speakeasy", "speakeasy-new-task", "speakeasy-models", "speakeasy-peek"],
       install: `omarchy plugin add ${GH}speakeasy.git --enable`,
       video: "speakeasy",
+    },
+    {
+      name: "Autonomix", repo: "omarchy-autonomix", cat: "system", glyph: "↑",
+      line: "Updates for apps from GitHub releases.",
+      desc: "A bar widget powered by autonomix-cli that shows how many of your tracked apps have updates waiting. Its panel tracks new repos and installs or updates apps from GitHub releases without opening a terminal.",
+      shots: [],
+      install: `git clone ${GH}omarchy-autonomix && cd omarchy-autonomix && ./install.sh && omarchy plugin enable ninepointlabs.autonomix`,
     },
     {
       name: "Spotify", repo: "omarchy-spotify", cat: "media", glyph: "♫",
@@ -218,8 +237,8 @@ window.NPL = {
       video: "fm-cli",
     },
     {
-      name: "Omarchy-DB", repo: "omarchy-db", glyph: "▤", kicker: "Microsoft Access, without the hard parts",
-      desc: "One local file. Bring spreadsheets in, work in forms or a grid, filter, save views, print to PDF — and let your agents in through MCP.",
+      name: "Jubako", repo: "jubako", glyph: "▤", kicker: "Microsoft Access, without the hard parts",
+      desc: "A simple Access-like database in one local file with several tables, like the stacked Japanese lunch box it's named for. Bring spreadsheets in, work in forms or a grid, filter, save views, print to PDF — and let your agents in through MCP.",
       shots: ["omarchy-db", "omarchy-db-view", "omarchy-db-form", "omarchy-db-report", "omarchy-db-service", "omarchy-db-light"],
       video: "omarchy-db",
     },
