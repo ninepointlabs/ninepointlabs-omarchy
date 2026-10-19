@@ -26,16 +26,6 @@ window.NPL = {
       c: { bg: "#101828", bgDark: "#0B111E", bgLight: "#1B2740", fg: "#DDE5F3", fgDim: "#72809D", accent: "#E8B92E", selection: "#22314F", muted: "#5F6E8C", red: "#C0453A", yellow: "#E8B92E", green: "#4F9B6E", magenta: "#8A72D6", cyan: "#4FA5C6" },
     },
     {
-      id: "army", name: "US Army", repo: "omarchy-us-army-theme", slug: "us-army", img: "theme-army",
-      note: "Olive drab and Army gold, with authentic division insignia.",
-      c: { bg: "#1E2419", bgDark: "#161B12", bgLight: "#2A3323", fg: "#EAE4D3", fgDim: "#8F9A80", accent: "#C9A227", selection: "#3D4A32", muted: "#6F7A62", red: "#C8312F", yellow: "#D9B33A", green: "#6E9E4F", magenta: "#8B5CC8", cyan: "#5FA8A0" },
-    },
-    {
-      id: "campfire", name: "WoW Forever: Campfire", repo: "omarchy-wow-forever-campfire-theme", slug: "wow-forever-campfire", img: "theme-campfire",
-      note: "A night camp in the pines. Campfire amber on forest canopy blue-black.",
-      c: { bg: "#121A21", bgDark: "#0D1318", bgLight: "#1B2731", fg: "#E4D8C0", fgDim: "#7D8890", accent: "#E3A04F", selection: "#2E3A44", muted: "#6B7A85", red: "#C9583A", yellow: "#E3A04F", green: "#8FA86A", magenta: "#9A88C6", cyan: "#6FA3A8" },
-    },
-    {
       id: "ted-lasso", name: "Ted Lasso", repo: "omarchy-ted-lasso-theme", slug: "\"Ted Lasso\"", img: "theme-ted-lasso",
       note: "Richmond navy, biscuit cream and a yellow sign that says BELIEVE.",
       c: { bg: "#16283D", bgDark: "#101D2C", bgLight: "#22374D", fg: "#F5ECD9", fgDim: "#8A9BAE", accent: "#F2C230", selection: "#3A5068", muted: "#5C7086", red: "#D64545", yellow: "#F2C230", green: "#5FA85D", magenta: "#D98FC0", cyan: "#5FB6B0" },
@@ -241,6 +231,16 @@ window.NPL = {
       desc: "A simple Access-like database in one local file with several tables, like the stacked Japanese lunch box it's named for. Bring spreadsheets in, work in forms or a grid, filter, save views, print to PDF — and let your agents in through MCP.",
       shots: ["omarchy-db", "omarchy-db-view", "omarchy-db-form", "omarchy-db-report", "omarchy-db-service", "omarchy-db-light"],
       video: "omarchy-db",
+    },
+    {
+      name: "Dogear", repo: "dogear", glyph: "◈", kicker: "PDF reader for studying",
+      desc: "A PDF reader for studying, made for Omarchy. Highlight in five colors, take notes, fill in worksheet blanks by clicking them, and export it all to Markdown. Notes live beside the PDF in ~/Documents/Dogear; change your Omarchy theme and Dogear follows.",
+      shots: ["dogear", "dogear-notes", "dogear-library"],
+    },
+    {
+      name: "Rune", repo: "rune", glyph: "✍\uFE0E", kicker: "The word processor that writes with you",
+      desc: "Real .odt, .docx and .doc. Your ChatGPT plan — or Claude, GPT and Grok through OpenRouter — writing straight into the document. Outline, story notes, citations and a native Qt feel, built for Omarchy.",
+      shots: ["rune", "rune-ai-edit", "rune-outline"],
     },
     {
       name: "Bahá'í Reader", repo: "bahai-reader", glyph: "✧", kicker: "A quiet place for the Writings",
