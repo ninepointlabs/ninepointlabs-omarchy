@@ -319,6 +319,10 @@ blockquote { margin: 24px 0; padding: 14px 18px; border-left: 3px solid var(--ac
 }
 .foot .guild { display: inline-flex; opacity: .85; transition: opacity .2s var(--ease); }
 .foot .guild:hover, .foot .guild:focus-visible { opacity: 1; }
+.foot .social { display: flex; flex-wrap: wrap; gap: 10px; }
+.foot .social a { display: inline-flex; color: var(--fg-dim); transition: color .2s var(--ease); }
+.foot .social a:hover, .foot .social a:focus-visible { color: var(--accent); }
+.foot .social svg { width: 18px; height: 18px; fill: currentColor; }
 
 /* ───────── Overlays ───────── */
 .overlay {
