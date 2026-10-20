@@ -209,13 +209,13 @@ window.NPL = {
 
   apps: [
     {
-      name: "omaforge", repo: "omaforge", glyph: "⚒", kicker: "World of Warcraft addon manager",
+      name: "omaforge", repo: "omaforge", glyph: "⚒", site: "https://omaforge.ninepointlabs.com", kicker: "World of Warcraft addon manager",
       desc: "CurseForge, WoWInterface and GitHub addons for Retail, Classic and Forever, in one native Omarchy window that follows your theme. Search, install, update everything, and back up your settings before you break them.",
       shots: ["omaforge", "omaforge-installed", "omaforge-themes"],
       video: "omaforge",
     },
     {
-      name: "Repokase", repo: "repokase", glyph: "▣", kicker: "Your repos, chef's choice",
+      name: "Repokase", repo: "repokase", glyph: "▣", site: "https://repokase.ninepointlabs.com", kicker: "Your repos, chef's choice",
       desc: "Every GitHub repository you own, collaborate on or see through an org, in one native window. Stats, CI runs, health badges, traffic history past GitHub's 14 days, bulk archive, and workflow_dispatch with inputs. Fully keyboard-driven, and it repaints the moment you run omarchy theme set.",
       shots: ["repokase-hero", "repokase-details-traffic", "repokase-run-workflow", "repokase-theme-latte"],
       video: "repokase",
@@ -227,23 +227,23 @@ window.NPL = {
       video: "fm-cli",
     },
     {
-      name: "Jubako", repo: "jubako", glyph: "▤", kicker: "Microsoft Access, without the hard parts",
+      name: "Jubako", repo: "jubako", glyph: "▤", site: "https://jubako.ninepointlabs.com", kicker: "Microsoft Access, without the hard parts",
       desc: "A simple Access-like database in one local file with several tables, like the stacked Japanese lunch box it's named for. Bring spreadsheets in, work in forms or a grid, filter, save views, print to PDF — and let your agents in through MCP.",
       shots: ["omarchy-db", "omarchy-db-view", "omarchy-db-form", "omarchy-db-report", "omarchy-db-service", "omarchy-db-light"],
       video: "omarchy-db",
     },
     {
-      name: "Dogear", repo: "dogear", glyph: "◈", kicker: "PDF reader for studying",
+      name: "Dogear", repo: "dogear", glyph: "◈", site: "https://dogear.ninepointlabs.com", kicker: "PDF reader for studying",
       desc: "A PDF reader for studying, made for Omarchy. Highlight in five colors, take notes, fill in worksheet blanks by clicking them, and export it all to Markdown. Notes live beside the PDF in ~/Documents/Dogear; change your Omarchy theme and Dogear follows.",
       shots: ["dogear", "dogear-notes", "dogear-library"],
     },
     {
-      name: "Rune", repo: "rune", glyph: "✍\uFE0E", kicker: "The word processor that writes with you",
+      name: "Rune", repo: "rune", glyph: "✍\uFE0E", site: "https://rune.ninepointlabs.com", kicker: "The word processor that writes with you",
       desc: "Real .odt, .docx and .doc. Your ChatGPT plan — or Claude, GPT and Grok through OpenRouter — writing straight into the document. Outline, story notes, citations and a native Qt feel, built for Omarchy.",
       shots: ["rune", "rune-ai-edit", "rune-outline"],
     },
     {
-      name: "Bahá'í Reader", repo: "bahai-reader", glyph: "✧", kicker: "A quiet place for the Writings",
+      name: "Bahá'í Reader", repo: "bahai-reader", glyph: "✧", site: "https://bahaireader.org", kicker: "A quiet place for the Writings",
       desc: "An offline GTK 4 prayer book and reader. Ten collections, downloadable languages, and it follows your Omarchy colours live — custom themes included.",
       shots: ["bahai-reader"],
     },
