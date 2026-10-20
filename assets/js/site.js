@@ -182,6 +182,7 @@
         <p class="desc">${esc(a.desc)}</p>
         <div class="app-actions">
           <a class="btn primary" href="${GH}${a.repo}/releases/latest">Download the latest release ↗</a>
+          ${a.site ? `<a class="btn" href="${a.site}">Website ↗</a>` : ""}
           <a class="btn" href="${GH}${a.repo}">View on GitHub ↗</a>
           ${a.video ? `<button class="btn" data-play="${a.video}">▶ Watch the promo</button>` : ""}
         </div>
