@@ -55,8 +55,7 @@ kbd {
 .bar-left, .bar-right { display: flex; align-items: center; gap: 6px; min-width: 0; }
 .bar-right { justify-content: flex-end; }
 .bar-logo { display: grid; place-items: center; width: 26px; height: 26px; color: var(--accent); }
-.bar-logo svg { width: 20px; height: 20px; transition: transform .8s var(--ease); }
-.bar-logo:hover svg { transform: rotate(40deg); }
+.bar-logo svg { width: 24px; height: 24px; }
 .workspaces { display: flex; gap: 2px; }
 .workspaces a {
   display: flex; align-items: center; justify-content: center; gap: 6px; padding: 3px 8px;
@@ -108,10 +107,9 @@ kbd {
   overflow: hidden;
 }
 .hero-bg { position: absolute; inset: 0; pointer-events: none; }
-.hero-star {
-  position: absolute; width: min(115vh, 1100px); aspect-ratio: 1; right: -18%; top: 50%;
+.hero-mark {
+  position: absolute; height: min(85vh, 760px); aspect-ratio: 144 / 208; right: 4%; top: 50%;
   translate: 0 -50%; color: var(--accent); opacity: .07;
-  animation: spin 140s linear infinite;
 }
 .hero-grid {
   position: absolute; inset: 0;
@@ -124,7 +122,6 @@ kbd {
   background: radial-gradient(circle, color-mix(in srgb, var(--accent) 22%, transparent), transparent 60%);
   filter: blur(40px); transition: background .8s var(--ease);
 }
-@keyframes spin { to { rotate: 360deg; } }
 
 .hero-copy { position: relative; z-index: 1; }
 .eyebrow {
@@ -305,8 +302,8 @@ h2 { margin: 0; font-size: clamp(1.8rem, 3.8vw, 3rem); line-height: 1.08; font-w
 
 /* About */
 .about { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 60px; align-items: center; }
-.about-star { color: var(--accent); display: grid; place-items: center; }
-.about-star svg { width: min(100%, 380px); filter: drop-shadow(0 0 60px color-mix(in srgb, var(--accent) 45%, transparent)); animation: spin 90s linear infinite reverse; }
+.about-mark { color: var(--accent); display: grid; place-items: center; }
+.about-mark svg { width: min(100%, 220px); aspect-ratio: 144 / 208; }
 .about-copy p { color: color-mix(in srgb, var(--fg) 80%, var(--bg)); }
 .about-copy h2 { margin-bottom: 18px; }
 blockquote { margin: 24px 0; padding: 14px 18px; border-left: 3px solid var(--accent); background: var(--bg-light); color: var(--fg); font-size: 14px; }
@@ -378,7 +375,7 @@ blockquote { margin: 24px 0; padding: 14px 18px; border-left: 3px solid var(--ac
   .reel-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .app, .about { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .app:nth-child(even) .app-media { order: 0; }
-  .about-star svg { width: 180px; }
+  .about-mark svg { width: 120px; }
 }
 @media (max-width: 700px) {
   .bar { grid-template-columns: minmax(0, 1fr) auto; }
