@@ -7,7 +7,7 @@ const IMG = "assets/img/";
 window.NPL = {
   themes: [
     {
-      id: "ninepoint", name: "Nine Point", note: "The house colours: teal star on midnight.",
+      id: "ninepoint", name: "Nine Point", note: "The house colours: teal on midnight.",
       c: { bg: "#0B1419", bgDark: "#081015", bgLight: "#122129", fg: "#E4EEF0", fgDim: "#7F959C", accent: "#2AA4CF", selection: "#15394A", muted: "#4E6670", red: "#E0605A", yellow: "#E8B84A", green: "#6CC08B", magenta: "#B98ADB", cyan: "#4FC1C9" },
     },
     {

@@ -19,7 +19,7 @@ index.html
 assets/css/site.css     theme tokens + layout
 assets/js/data.js       all projects, themes, videos (edit this to add things)
 assets/js/site.js       rendering and interactions
-assets/img/             screenshots (WebP), wallpapers, og.png, npl-mark.svg
+assets/img/             screenshots (WebP), wallpapers, og.png, favicon.svg
 assets/video/           promo videos (H.264, faststart) + posters
 ```
 

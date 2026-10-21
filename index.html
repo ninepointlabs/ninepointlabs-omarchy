@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nine Point Labs for Omarchy">
   <meta name="twitter:description" content="Apps, bar plugins and themes for the Omarchy desktop.">
-  <link rel="icon" href="assets/img/npl-mark.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
 <header class="bar" id="bar">
   <div class="bar-left">
     <a href="#home" class="bar-logo" aria-label="Nine Point Labs, back to top">
-      <svg viewBox="0 0 300 300" aria-hidden="true"><use href="#star"/></svg>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#npl-mark-24"/></svg>
     </a>
     <nav class="workspaces" aria-label="Sections">
       <a href="#home" data-ws="home"><b>1</b><span>home</span></a>
@@ -55,7 +55,7 @@
 <!-- 1 · HOME -->
 <section id="home" class="hero ws">
   <div class="hero-bg" aria-hidden="true">
-    <svg class="hero-star" viewBox="0 0 300 300"><use href="#star"/></svg>
+    <svg class="hero-mark" viewBox="0 0 144 208"><use href="#npl-mark"/></svg>
     <div class="hero-grid"></div>
   </div>
 
@@ -143,13 +143,13 @@
 
 <!-- 6 · ABOUT -->
 <section id="about" class="ws wrap about">
-  <div class="about-star" aria-hidden="true"><svg viewBox="0 0 300 300"><use href="#star"/></svg></div>
+  <div class="about-mark" aria-hidden="true"><svg viewBox="0 0 144 208"><use href="#npl-mark"/></svg></div>
   <div class="about-copy">
     <p class="eyebrow">workspace 6 · who's building this</p>
     <h2>Nine Point Labs</h2>
     <p>I'm Tim: combat veteran, semi-retired technologist, full-time dad in Whitehouse, Texas. Omarchy runs on every machine I sit down at, and these projects are my way of giving something back to it.</p>
     <p>I write some of the code and direct a small team of AI agents for the rest. My one real skill is seeing clearly what a tool should <em>feel</em> like, and being stubborn until it does.</p>
-    <blockquote><strong>Why nine?</strong> In the Bahá'í Faith, nine is the number of completeness and of unity, especially the unity of humanity. Hence the star, and hence the name.</blockquote>
+    <blockquote><strong>Why nine?</strong> In the Army, a nine-line is a short report with nine items. You fill it in, send it, and help is on the way. No fluff, nothing extra, and it works when it counts. I carried that idea with me from the infantry into building software. Nine Point Labs makes small, clear tools for Linux and the open web that do their job and stay out of your way. (And yes, the 'Labs' is a little nod to Bell Labs.)</blockquote>
     <div class="links">
       <a class="btn primary" href="https://github.com/ninepointlabs">GitHub</a>
       <a class="btn" href="https://ninepointlabs.com">ninepointlabs.com</a>
@@ -208,9 +208,25 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
-    <symbol id="star" viewBox="0 0 300 300">
-      <polygon points="150,32 167.79,101.14 225.85,59.61 195.03,124 266.21,129.51 201.21,159.03 252.19,209 183.42,189.83 190.36,260.88 150,202 109.64,260.88 116.58,189.83 47.81,209 98.79,159.03 33.79,129.51 104.97,124 74.15,59.61 132.21,101.14" fill="none" stroke="currentColor" stroke-width="16" stroke-linejoin="round"/>
-      <polygon points="150,108 156.16,133.09 177,117.83 165.59,141 191.36,142.71 167.73,153.13 186.37,171 161.57,163.79 164.36,189.47 150,168 135.64,189.47 138.43,163.79 113.63,171 132.27,153.13 108.64,142.71 134.41,141 123,117.83 143.84,133.09" fill="currentColor" opacity=".9"/>
+    <!-- Nine Point Labs mark (nine-line 9), one colour: fills with currentColor so it follows the theme accent. -->
+    <symbol id="npl-mark" viewBox="0 0 144 208" fill="currentColor">
+      <rect x="0" y="0" width="144" height="16" rx="3"/>
+      <rect x="0" y="24" width="40" height="16" rx="3"/>
+      <rect x="104" y="24" width="40" height="16" rx="3"/>
+      <rect x="0" y="48" width="40" height="16" rx="3"/>
+      <rect x="104" y="48" width="40" height="16" rx="3"/>
+      <rect x="0" y="72" width="40" height="16" rx="3"/>
+      <rect x="104" y="72" width="40" height="16" rx="3"/>
+      <rect x="0" y="96" width="144" height="16" rx="3"/>
+      <rect x="104" y="120" width="40" height="16" rx="3"/>
+      <rect x="104" y="144" width="40" height="16" rx="3"/>
+      <rect x="104" y="168" width="40" height="16" rx="3"/>
+      <rect x="0" y="192" width="144" height="16" rx="3"/>
+    </symbol>
+    <symbol id="npl-mark-24" viewBox="0 0 24 24" fill="currentColor">
+      <rect x="5" y="2" width="14" height="2"/><rect x="5" y="5" width="4" height="2"/><rect x="15" y="5" width="4" height="2"/>
+      <rect x="5" y="8" width="4" height="2"/><rect x="15" y="8" width="4" height="2"/><rect x="5" y="11" width="14" height="2"/>
+      <rect x="15" y="14" width="4" height="2"/><rect x="15" y="17" width="4" height="2"/><rect x="5" y="20" width="14" height="2"/>
     </symbol>
   </defs>
 </svg>
