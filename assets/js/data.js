@@ -101,7 +101,7 @@ window.NPL = {
       video: "speakeasy",
     },
     {
-      name: "Autonomix", repo: "omarchy-autonomix", cat: "system", glyph: "↑",
+      name: "Autonomix", repo: "omarchy-autonomix", cat: "system", glyph: "↑", site: "https://autonomix-cli.ninepointlabs.com",
       line: "Updates for apps from GitHub releases.",
       desc: "A bar widget powered by autonomix-cli that shows how many of your tracked apps have updates waiting. Its panel tracks new repos and installs or updates apps from GitHub releases without opening a terminal.",
       shots: [],
@@ -205,6 +205,13 @@ window.NPL = {
       shots: ["dopewars"],
       install: `git clone ${GH}omarchy-dopewars && cd omarchy-dopewars && ./install.sh`,
     },
+    {
+      name: "Update Arcade", repo: "omarchy-update-arcade", cat: "games", glyph: "☄\uFE0E",
+      line: "Asteroids while omarchy update runs.",
+      desc: "A Play button on the omarchy update terminal that swaps the build output for Asteroids, with saucers, sound and high scores.",
+      shots: [],
+      install: `git clone ${GH}omarchy-update-arcade && cd omarchy-update-arcade && ./install.sh && omarchy plugin enable ninepointlabs.update-arcade`,
+    },
   ],
 
   apps: [
@@ -221,7 +228,7 @@ window.NPL = {
       video: "repokase",
     },
     {
-      name: "fm-cli", repo: "fm-cli", glyph: "✉\uFE0E", kicker: "Fastmail from the terminal",
+      name: "fm-cli", repo: "fm-cli", glyph: "✉\uFE0E", site: "https://fm-cli.ninepointlabs.com", kicker: "Fastmail from the terminal",
       desc: "A small Go client for Fastmail's JMAP API: a full-screen mail app, plus scriptable commands that print JSON. It's the engine behind the Fastmail bar plugin.",
       shots: ["fm-cli"],
       video: "fm-cli",
