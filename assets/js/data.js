@@ -245,11 +245,6 @@ window.NPL = {
       shots: ["dogear", "dogear-notes", "dogear-library"],
     },
     {
-      name: "Rune", repo: "rune", glyph: "✍\uFE0E", site: "https://rune.ninepointlabs.com", kicker: "The word processor that writes with you",
-      desc: "Real .odt, .docx and .doc. Your ChatGPT plan — or Claude, GPT and Grok through OpenRouter — writing straight into the document. Outline, story notes, citations and a native Qt feel, built for Omarchy.",
-      shots: ["rune", "rune-ai-edit", "rune-outline"],
-    },
-    {
       name: "Bahá'í Reader", repo: "bahai-reader", glyph: "✧", site: "https://bahaireader.org", kicker: "A quiet place for the Writings",
       desc: "An offline GTK 4 prayer book and reader. Ten collections, downloadable languages, and it follows your Omarchy colours live — custom themes included.",
       shots: ["bahai-reader"],
